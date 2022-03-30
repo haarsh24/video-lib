@@ -1,3 +1,3 @@
-## Video Library Backend
+<h1> MU XIZ</h1>
 
-This folder contains the Mock Backend created for Video Library App. It contains different API end-points and database configuration for building Video Library; so that you can focus on building Frontend.
+<h3> Watch amazing music videos on MUX IZ</h3>
