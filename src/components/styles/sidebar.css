@@ -1,0 +1,25 @@
+.sidebar-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 15rem;
+}
+
+.sidebar-item {
+  position: static;
+  display: flex;
+  flex-direction: row;
+  margin: 0.5rem;
+  align-items: center;
+  gap: 1.5rem;
+  height: 5rem;
+  width: 100%;
+  border-radius: 1rem;
+  padding-left: 0.5rem;
+}
+
+.sidebar-item:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
