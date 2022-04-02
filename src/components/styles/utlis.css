@@ -41,7 +41,7 @@ input {
   justify-content: space-between;
   padding: 1rem;
   border-radius: 0 0 1rem 1rem;
-  position: sticky;
+  position: -webkit-sticky;
   top: 0rem;
 }
 
@@ -169,4 +169,8 @@ img {
   border: 0.2rem solid var(--white);
   color: var(--white);
   width: 20rem;
+}
+
+.h6 {
+  font-size: 0.8rem;
 }

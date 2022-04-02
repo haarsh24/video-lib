@@ -5,9 +5,9 @@
 
 export const videos = [{
     _id: "EW4pNzAbVao",
-    title: "Bombay Dreams - KSHMR & Lost Stories ",
+    title: "Bombay Dreams ",
     description: "EDM Music , video shows story of a younge boy",
-    creator: "Lost Stories",
+    creator: "Lost Stories & KSHMR",
     category: " EDM",
     duration: "03:29",
     views: "34.7M",
@@ -15,7 +15,7 @@ export const videos = [{
   },
   {
     _id: "WaCj4ypsjXA",
-    title: "Nucleya & Krewella - Good for you ",
+    title: " Good for you ",
     description: "Krewella roaming in India",
     creator: "Nucleya",
     category: " EDM",
@@ -85,7 +85,7 @@ export const videos = [{
   },
      {
        _id: "5qF_qbaWt3Q",
-       title: "Linkin Park - Waiting for the End ",
+       title: " Waiting for the End ",
        description: " Evergreen song",
        creator: "Linkin Park",
        category: "English Rock",

@@ -7,12 +7,16 @@ const Navbar = () => {
         <div className="bars">
           <h2>
             {" "}
-            <a className="brand-name" href="/">
-              MusicXClub
-            </a>{" "}
+            <Link className="brand-name" to="/">
+              MusicXclub
+            </Link>{" "}
           </h2>
         </div>
-        <input className="input-text input-search" placeholder="Search" />
+        <input
+          className="input-text input-search"
+          placeholder="Search 
+         "
+        />
         <div className="nav-icon ">
           <span className="material-icons md-48">face</span>
         </div>
