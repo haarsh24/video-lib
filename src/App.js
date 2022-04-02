@@ -13,8 +13,11 @@ import { WatchLater } from "./pages/watchLater/watchLater";
 function App() {
   return (
     <div className="App">
+     
+      
       < Navbar />
-      <Sidebar/>
+          <Sidebar />
+          
       <Routes>  
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<Login />} />

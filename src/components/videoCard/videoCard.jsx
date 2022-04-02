@@ -22,7 +22,7 @@ const VideoCard = (props) => {
            <figure className="m1">
              <img
                className="avatar avatar-round avatar-xs  avatar-image"
-               src="https://picsum.photos/100"
+               src={videoData.creatorImage}
              />
            </figure>
            <div className="video-details flex-column">
