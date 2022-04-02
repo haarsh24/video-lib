@@ -3,6 +3,7 @@ import "./App.css";
 import { Navbar } from "./components/navbar/navbar";
 import { Sidebar } from "./components/sidebar/sidebar";
 import { VideoCard } from "./components/videoCard/videoCard";
+import { Category } from "./pages/category/category";
 import { HomePage } from "./pages/homePage/homePage";
 import { LikedVideos } from "./pages/likedVideos/likedVideos";
 import { Login } from "./pages/login/login";
@@ -24,7 +25,8 @@ function App() {
         <Route path="/signup" element={<Signup/>}/>
         <Route path="/watchlater" element={<WatchLater />} />
         <Route path="/likedvideos" element={<LikedVideos />} />
-        <Route path="playlist" element={<Playlist/>}/>
+        <Route path="/playlist" element={<Playlist />} />
+        <Route path="/category" element={<Category/>}/>
       </Routes>
       
     </div>

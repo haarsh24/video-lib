@@ -1,5 +1,8 @@
 .video-card {
   background-color: var(--secondary-color);
+  border: 0.2em solid var(--white);
+}
+.video-card:hover {
   border: 0.2rem solid var(--primary-color);
 }
 .video-card-image {
@@ -48,6 +51,6 @@
   bottom: 0.5rem;
   right: 0.5rem;
 }
-.video-extra-detail{
-  width:226px;
+.video-extra-detail {
+  width: 226px;
 }
