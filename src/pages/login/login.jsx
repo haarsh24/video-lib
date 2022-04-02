@@ -3,7 +3,7 @@ import { React, useReducer } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../../components/styles/main.css";
 import { useAuth } from "../../context/authContext";
-import { loginFormReducer } from "../../reducer/authReducer";
+import { loginFormReducer } from "../../reducer/authReducer"
 
 const Login = () => {
   const navigate = useNavigate();
