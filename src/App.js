@@ -1,41 +1,34 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import logo from "./logo.png";
+import { Navbar } from "./components/navbar/navbar";
+import { Sidebar } from "./components/sidebar/sidebar";
+import { VideoCard } from "./components/videoCard/videoCard";
+import { Category } from "./pages/category/category";
+import { HomePage } from "./pages/homePage/homePage";
+import { LikedVideos } from "./pages/likedVideos/likedVideos";
+import { Login } from "./pages/login/login";
+import { Playlist } from "./pages/playlist/playlist";
+import { Signup } from "./pages/signup/signup";
+import { WatchLater } from "./pages/watchLater/watchLater";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} alt="mockBee logo" width="180" height="180" />
-        <h1 className="brand-title">
-          Welcome to <span>mockBee!</span>
-        </h1>
-        <p className="brand-description">
-          Get started by editing <code>src/App.js</code>
-        </p>
-        <div className="links">
-          <a
-            href="https://mockbee.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Explore mockBee
-          </a>
-          <a
-            href="https://mockbee.netlify.app/docs/api/introduction"
-            target="_blank"
-            rel="noreferrer"
-          >
-            API Documentation
-          </a>
-          <a
-            href="https://github.com/neogcamp/mockBee"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Contribute
-          </a>
-        </div>
-      </header>
+     
+      
+      < Navbar />
+          <Sidebar />
+          
+      <Routes>  
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup/>}/>
+        <Route path="/watchlater" element={<WatchLater />} />
+        <Route path="/likedvideos" element={<LikedVideos />} />
+        <Route path="/playlist" element={<Playlist />} />
+        <Route path="/category" element={<Category/>}/>
+      </Routes>
+      
     </div>
   );
 }
