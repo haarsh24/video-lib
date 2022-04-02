@@ -10,4 +10,10 @@ const getVideosDataFromServer = async () => {
         console.log(error);
     }
 }
-export { getVideosDataFromServer };
+
+const authLogin = async (email, password) => {
+}
+export {
+    getVideosDataFromServer,
+    authLogin
+};
