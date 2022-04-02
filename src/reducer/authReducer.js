@@ -36,3 +36,27 @@ const loginFormReducer = (state, action) => {
                     state;
     }
 }
+const signupFormReducer = (state, dispatch) => {
+    switch (dispatch.type) {
+        case "SET_FIRST_NAME":
+            return {
+                ...state, firstName: dispatch.payload
+            }
+            case "SET_LAST_NAME":
+                return {
+                    ...state, lastName: dispatch.payload
+                }
+                case "SET_EMAIL":
+                    return {
+                        ...state, email: dispatch.payload
+                    }
+                    case "SET_PASSWORD":
+                        return {
+                            ...state, password: dispatch.payload
+                        }
+                        default:
+                            state;
+    }
+}
+
+export {authReducer, loginFormReducer,signupFormReducer};

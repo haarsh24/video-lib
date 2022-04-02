@@ -14,9 +14,8 @@ import { WatchLater } from "./pages/watchLater/watchLater";
 function App() {
   return (
     <div className="App">
-     
-      
       < Navbar />
+      <div className="flex">
           <Sidebar />
           
       <Routes>  
@@ -28,7 +27,7 @@ function App() {
         <Route path="/playlist" element={<Playlist />} />
         <Route path="/category" element={<Category/>}/>
       </Routes>
-      
+      </div>
     </div>
   );
 }
