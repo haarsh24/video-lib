@@ -42,8 +42,14 @@
 .watch-later {
   position: absolute;
   top: 0.5rem;
-
   right: 0.5rem;
+}
+.watch-later:hover{
+  color:var(--primary-color);
+  cursor:pointer;
+}
+.watch-later-selected{
+  color:var(--primary-color);
 }
 .timer {
   position: absolute;

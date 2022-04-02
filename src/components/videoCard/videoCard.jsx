@@ -1,11 +1,23 @@
 import "../styles/main.css";
 import { useVideo } from "../../context/videoContext";
+import { useWatchLater } from "../../context/watchLaterContext";
+import { useState } from "react";
 
 const VideoCard = (props) => {
+  const [watchLaterClicked, setWatchLaterClicked] = useState(false);
   const videoData = props.video;
-  console.log(videoData);
   const { videoList } = useVideo();
-  console.log(videoList);
+  const { watchLaterDispatch } = useWatchLater();
+  
+  const watchLaterHandler = () => {
+    watchLaterClicked ? setWatchLaterClicked(false) : setWatchLaterClicked(true);
+    watchLaterDispatch({
+                 type: "ADD_VIDEO_TO_WATCH_LATER",
+                 payload: videoData,
+               })
+             
+  };
+  
    return (
      <>
        <div className="card basic video-card">
@@ -15,7 +27,13 @@ const VideoCard = (props) => {
              src={`https://i.ytimg.com/vi/${videoData._id}/hq720.jpg`}
            />
 
-           <span className="material-icons watch-later ">watch_later</span>
+           <span
+             onClick={watchLaterHandler}
+               
+             className={(watchLaterClicked ? "material-icons watch-later watch-later-selected" : "material-icons watch-later")}
+           >
+             watch_later
+           </span>
            <span className="timer">{videoData.views}</span>
          </div>
          <div className="video-card-info flex ">
