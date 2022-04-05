@@ -1,6 +1,11 @@
 .videos {
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin:0;
-  padding:0
+  margin: 0;
+  padding: 0;
+}
+.action-item {
+  text-align: center;
+  margin: 0.1rem !important;
+  padding: 0.2rem !important;
 }
