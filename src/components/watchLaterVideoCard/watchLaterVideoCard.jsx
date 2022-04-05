@@ -1,11 +1,26 @@
 import {useWatchLater} from "../../context/watchLaterContext"
-
+import { useNavigate } from "react-router-dom";
+import { isVideoInWatchLater } from "../../utilities/helperFunctions/watchLaterFunction";
+import {
+  removeVideoFromWatchLater,
+  addVideoInWatchLater,
+} from "../../utilities/apiCalls/watchLaterApiCalls";
 const WatchLaterVideoCard = (props) => {
-    
+    const navigate = useNavigate();
     console.log(props)
     const videoData = props.video;
     const { watchLaterDispatch } = useWatchLater();
-    
+      const watchLaterHandler = () => {
+        if (isLogin) {
+          if (isVideoInWatchLater(videoData._id, watchLaterList)) {
+            removeVideoFromWatchLater(videoData._id, watchLaterDispatch, token);
+          } else {
+            addVideoInWatchLater(videoData, watchLaterDispatch, token);
+          }
+        } else {
+          navigate("/login");
+        }
+      };
   
     return (
       <>
@@ -16,17 +31,7 @@ const WatchLaterVideoCard = (props) => {
               src={`https://i.ytimg.com/vi/${videoData._id}/hq720.jpg`}
             />
 
-            <span
-              onClick={() =>
-                watchLaterDispatch({
-                  type: "REMOVE_VIDEO_FROM_WATCH_LATER",
-                  payload: videoData,
-                })
-              }
-              className="material-icons watch-later watch-later-selected"
-            >
-              watch_later
-            </span>
+          
             <span className="timer">{videoData.views}</span>
           </div>
           <div className="video-card-info flex ">
@@ -44,6 +49,19 @@ const WatchLaterVideoCard = (props) => {
                 <span>{videoData.uploaded} months ago</span>
               </div>
             </div>
+          </div>
+          <div className="flex space-around">
+            <button
+              className="btn flex action-item h5"
+              onClick={watchLaterHandler}
+            >
+              <span className="material-icons ">watch_later</span>
+              <span>Watch Later</span>
+            </button>
+            <button className="btn flex action-item h5">
+              <span class="material-icons">playlist_add</span>
+              <span>Add to Playlist</span>
+            </button>
           </div>
         </div>
       </>
