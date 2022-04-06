@@ -9,11 +9,12 @@ import {
   removeVideoFromWatchLater,
   addVideoInWatchLater,
 } from "../../utilities/apiCalls/watchLaterApiCalls";
+import { usePlayList} from "../../context/playlistContext";
 
-const VideoCard = (props) => {
+const VideoCard = ({video, setCurrentClickedVideo,setShowModal}) => {
   const [watchLaterClicked, setWatchLaterClicked] = useState(false);
   const navigate = useNavigate();
-  const videoData = props.video;
+  const videoData =video;
   const { videoList } = useVideo();
   const {
     authState: { isLogin, token },
@@ -22,6 +23,7 @@ const VideoCard = (props) => {
     watchLaterState: { watchLaterList },
     watchLaterDispatch,
   } = useWatchLater();
+  const { playListDispatch } = usePlayList();
 
   const watchLaterHandler = () => {
     if (isLogin) {
@@ -30,6 +32,16 @@ const VideoCard = (props) => {
       } else {
         addVideoInWatchLater(videoData, watchLaterDispatch, token);
       }
+    } else {
+      navigate("/login");
+    }
+  };
+
+  const playlistHandler = () => {
+    if (isLogin) {
+    setCurrentClickedVideo(videoData);
+    setShowModal(pre => !pre);
+      console.log(videoData);
     } else {
       navigate("/login");
     }
@@ -61,18 +73,17 @@ const VideoCard = (props) => {
             </div>
           </div>
         </div>
-        <div className="flex space-around">
-          <button
-            className="btn flex action-item h5"
+        <div className="flex space-between">
+          <span
+            className="material-icons action-item watch-later-icon h3"
             onClick={watchLaterHandler}
           >
-            <span className="material-icons ">watch_later</span>
-            <span>Watch Later</span>
-          </button>
-          <button className="btn flex action-item h5">
-            <span class="material-icons">playlist_add</span>
-            <span>Add to Playlist</span>
-          </button>
+            watch_later
+          </span>
+
+          <span class="material-icons action-item h3 " onClick={playlistHandler}>
+            playlist_add
+          </span>
         </div>
       </div>
     </>

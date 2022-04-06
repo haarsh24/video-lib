@@ -5,21 +5,28 @@ import {
   removeVideoFromWatchLater,
   addVideoInWatchLater,
 } from "../../utilities/apiCalls/watchLaterApiCalls";
+import { useAuth } from "../../context/authContext";
+
+
 const WatchLaterVideoCard = (props) => {
-    const navigate = useNavigate();
+    
     console.log(props)
-    const videoData = props.video;
-    const { watchLaterDispatch } = useWatchLater();
+  const videoData = props.video;
+    const {
+      authState: { token },
+    } = useAuth();
+    const {
+      watchLaterState: { watchLaterList },
+      watchLaterDispatch,
+    } = useWatchLater();
       const watchLaterHandler = () => {
-        if (isLogin) {
+      
           if (isVideoInWatchLater(videoData._id, watchLaterList)) {
             removeVideoFromWatchLater(videoData._id, watchLaterDispatch, token);
           } else {
             addVideoInWatchLater(videoData, watchLaterDispatch, token);
           }
-        } else {
-          navigate("/login");
-        }
+        
       };
   
     return (
@@ -31,7 +38,6 @@ const WatchLaterVideoCard = (props) => {
               src={`https://i.ytimg.com/vi/${videoData._id}/hq720.jpg`}
             />
 
-          
             <span className="timer">{videoData.views}</span>
           </div>
           <div className="video-card-info flex ">
@@ -50,18 +56,15 @@ const WatchLaterVideoCard = (props) => {
               </div>
             </div>
           </div>
-          <div className="flex space-around">
-            <button
-              className="btn flex action-item h5"
+          <div className="flex space-between">
+            <span
+              className="material-icons action-item watch-later-icon h3"
               onClick={watchLaterHandler}
             >
-              <span className="material-icons ">watch_later</span>
-              <span>Watch Later</span>
-            </button>
-            <button className="btn flex action-item h5">
-              <span class="material-icons">playlist_add</span>
-              <span>Add to Playlist</span>
-            </button>
+              watch_later
+            </span>
+
+            <span class="material-icons action-item h3">playlist_add</span>
           </div>
         </div>
       </>

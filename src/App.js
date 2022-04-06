@@ -8,6 +8,7 @@ import { HomePage } from "./pages/homePage/homePage";
 import { LikedVideos } from "./pages/likedVideos/likedVideos";
 import { Login } from "./pages/login/login";
 import { Playlist } from "./pages/playlist/playlist";
+import { PlaylistDetails } from "./pages/playlistDetails/playlistDetails";
 import { Signup } from "./pages/signup/signup";
 import { WatchLater } from "./pages/watchLater/watchLater";
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/watchlater" element={<WatchLater />} />
         <Route path="/likedvideos" element={<LikedVideos />} />
         <Route path="/playlist" element={<Playlist />} />
+        <Route path="/playlist/:playlistId" element={<PlaylistDetails  />}/>
         <Route path="/category" element={<Category/>}/>
       </Routes>
       </div>
