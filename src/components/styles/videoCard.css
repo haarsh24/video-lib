@@ -1,9 +1,9 @@
 .video-card {
   background-color: var(--secondary-color);
-  border: 0.2em solid var(--white);
+  /* border: 0.2em solid var(--white); */
 }
 .video-card:hover {
-  border: 0.2rem solid var(--primary-color);
+  border: 0.05rem solid var(--primary-color);
 }
 .video-card-image {
   padding: 0;
