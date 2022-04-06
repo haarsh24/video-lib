@@ -1,11 +1,11 @@
-const watchLaterReducer = (state, action) => {
+const likeReducer = (state, action) => {
     console.log(action);
     switch(action.type) {
         
-        case "ADD_WATCH_LATER":
+        case "ADD_LIKE":
         return {
             ...state,
-            watchLaterList: action.payload
+            likeList: action.payload
         }
         default:
         return state;
@@ -13,5 +13,5 @@ const watchLaterReducer = (state, action) => {
 }
 
 export {
-    watchLaterReducer
+    likeReducer
 };

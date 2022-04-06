@@ -9,7 +9,8 @@ import {
   removeVideoFromWatchLater,
   addVideoInWatchLater,
 } from "../../utilities/apiCalls/watchLaterApiCalls";
-import { usePlayList} from "../../context/playlistContext";
+import { usePlayList } from "../../context/playlistContext";
+import { Link } from "react-router-dom";
 
 const VideoCard = ({video, setCurrentClickedVideo,setShowModal}) => {
   const [watchLaterClicked, setWatchLaterClicked] = useState(false);
@@ -49,12 +50,15 @@ const VideoCard = ({video, setCurrentClickedVideo,setShowModal}) => {
 
   return (
     <>
+      
       <div className="card basic video-card">
         <div className="img-container">
+        <Link to={`/video/${videoData._id}`}>
           <img
             className="image-responsive video-card-image"
             src={`https://i.ytimg.com/vi/${videoData._id}/hq720.jpg`}
-          />
+            />
+            </Link>
           <span className="timer">{videoData.views}</span>
         </div>
         <div className="video-card-info flex ">
@@ -85,7 +89,8 @@ const VideoCard = ({video, setCurrentClickedVideo,setShowModal}) => {
             playlist_add
           </span>
         </div>
-      </div>
+        </div>
+      
     </>
   );
 };

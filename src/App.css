@@ -1,3 +1,4 @@
+@import url("./components/styles/main.css");
 .videos {
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -12,7 +13,7 @@
 .action-item:hover {
   /* color: var(--primary-color); */
   font-size: 1.5rem;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   border-radius: 1rem 0 0.5rem 0;
 }
 .action-item:hover.watch-later-icon:hover {
@@ -26,5 +27,14 @@
   align-items: center;
   height:fit-content;
   align-content: center;
-  background-color: var(--card-background);
+ 
+}
+
+.responsive-sidebar{
+  position: fixed;
+}
+
+.video-player{
+  width:800px;
+  height:400px;
 }
