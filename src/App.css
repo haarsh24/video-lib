@@ -6,6 +6,25 @@
 }
 .action-item {
   text-align: center;
-  margin: 0.1rem !important;
-  padding: 0.2rem !important;
+  margin: 0rem !important;
+  padding: 0rem 1rem 0.1rem 1rem !important;
+}
+.action-item:hover {
+  /* color: var(--primary-color); */
+  font-size: 1.5rem;
+  background-color: var(--primary-color);
+  border-radius: 1rem 0 0.5rem 0;
+}
+.action-item:hover.watch-later-icon:hover {
+  border-radius: 0 1rem 0 0.5rem;
+}
+.playlist-container{
+  position: absolute;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:fit-content;
+  align-content: center;
+  background-color: var(--card-background);
 }
