@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import { Error } from "./components/error/error";
 import { Footer } from "./components/footer/footer";
 import { Navbar } from "./components/navbar/navbar";
 import { ResponsiveSidebar } from "./components/ResponsiveSidebar/responsiveSidebar";
@@ -20,9 +21,10 @@ function App() {
   return (
     <div className="App">
       < Navbar />
-      <div className="flex">
+      <div className="flex-column">
+        <div className="flex">
           <Sidebar />
-          {/* <ResponsiveSidebar/> */}
+          
       <Routes>  
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<Login />} />
@@ -33,9 +35,12 @@ function App() {
         <Route path="/playlist/:playlistId" element={<PlaylistDetails  />}/>
           <Route path="/category" element={<Category />} />
           <Route path="/video/:videoId" element={<SingleVideoPage />} />
-          <Route path="/history" element={<HistoryPage/>}/>
-        </Routes>
-        {/* <Footer/> */}
+            <Route path="/history" element={<HistoryPage />} />
+            <Route path="*" element={<Error/>}/>
+          </Routes>
+          </div>
+        <Footer />
+        <ResponsiveSidebar/>
       </div>
     </div>
   );
