@@ -19,11 +19,7 @@ const Navbar = () => {
             </Link>{" "}
           </h2>
         </div>
-        <input
-          className="input-text input-search"
-          placeholder="Search 
-         "
-        />
+        
         <div>
           <Link to="/login">
             <span className="h3">{(isLogin)?`Hi ,${userData.lastName}`:"Login"}</span>

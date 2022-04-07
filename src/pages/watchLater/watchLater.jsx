@@ -1,5 +1,6 @@
 import { useWatchLater } from "../../context/watchLaterContext";
 import { WatchLaterVideoCard } from "../../components/watchLaterVideoCard/watchLaterVideoCard";
+import { Explore } from "../../components/explore/explore";
 const WatchLater = () => {
   const {
     watchLaterState: { watchLaterList },
@@ -7,8 +8,9 @@ const WatchLater = () => {
   console.log(watchLaterList);
   return (
     <>
-      <div className="flex">
-        {watchLaterList.length === 0 ? (
+      {watchLaterList == 0 ? <Explore /> :
+        <div className="flex">
+        {(watchLaterList.length) == 0 ? (
           <h1 className="heading "> </h1>
         ) : (
           <div className="flex videos">
@@ -17,7 +19,7 @@ const WatchLater = () => {
             ))}
           </div>
         )}
-      </div>
+      </div>}
     </>
   );
 };

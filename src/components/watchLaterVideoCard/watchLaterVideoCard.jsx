@@ -6,6 +6,7 @@ import {
   addVideoInWatchLater,
 } from "../../utilities/apiCalls/watchLaterApiCalls";
 import { useAuth } from "../../context/authContext";
+import { Explore } from "../../components/explore/explore";
 
 
 const WatchLaterVideoCard = (props) => {
@@ -31,7 +32,8 @@ const WatchLaterVideoCard = (props) => {
   
     return (
       <>
-        <div className="card basic video-card">
+        
+          :<div className="card basic video-card">
           <div className="img-container">
             <img
               className="image-responsive video-card-image"
