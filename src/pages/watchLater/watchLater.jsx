@@ -10,15 +10,13 @@ const WatchLater = () => {
     <>
       {watchLaterList == 0 ? <Explore /> :
         <div className="flex">
-        {(watchLaterList.length) == 0 ? (
-          <h1 className="heading "> </h1>
-        ) : (
+        
           <div className="flex videos">
             {watchLaterList.map((video) => (
               <WatchLaterVideoCard video={video} />
             ))}
           </div>
-        )}
+      
       </div>}
     </>
   );

@@ -71,10 +71,14 @@ const SingleVideoPage = () => {
   
     
     return (
-        <div>
+        <div className="single-video-bar m1">
             {showModal && <PlaylistModal video={videoData} />}
-            <SingleVideoPlayer />
-            <div className="flex">
+        <SingleVideoPlayer />
+        <div className="h4 p1">
+        <span>{videoData.title} - </span>
+          <span>{videoData.creator}</span>
+          </div>
+            <div className="flex space-around p2 h2">
                 <span className='material-icons'
                  onClick={likeHandler}
                 >thumb_up_off_alt</span>

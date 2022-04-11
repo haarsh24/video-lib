@@ -23,8 +23,10 @@ function App() {
       < Navbar />
       <div className="flex-column">
         <div className="flex">
+         
+         
           <Sidebar />
-          
+          <div className="main-container">
       <Routes>  
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<Login />} />
@@ -38,6 +40,7 @@ function App() {
             <Route path="/history" element={<HistoryPage />} />
             <Route path="*" element={<Error/>}/>
           </Routes>
+          </div>
           </div>
         <Footer />
         <ResponsiveSidebar/>

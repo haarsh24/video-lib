@@ -4,7 +4,7 @@ import exploreImage from "../../assets/explore.gif"
 const Explore = () => {
     return (
         <>
-            <div className="heading flex-column p2">
+            <div className="heading flex-column p2 explore-error">
                 Nothing here
             
             <Link to="/"> <button className="btn m1">Explore</button> </Link>

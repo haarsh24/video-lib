@@ -15,24 +15,25 @@ const PlaylistInfoCard = ({ image_id, title, deleteButton }) => {
     }
     return (
         <>
-            <div className="">
-                <div className="">
+            {/* <div className=""> */}
+                {/* <div className="">
                     <img
                         src={`https://i.ytimg.com/vi/${image_id}/hq720.jpg`}
                         alt=""
                         className="image-responsive video-card-image"
                         loading="lazy"
                     />
+                </div> */}
+                <div className=" flex space-between m-tb-1">
+                    <div className=" m1">
+                        <h4>Playlist Name : {title}</h4>
+                       
                 </div>
-                <div className="text-container">
-                    <div className="text-container-title">
-                        <h4>{title}</h4>
-                        {deleteButton && <button className="btn">
-                            <span className="material-icons" onClick={playlistDeleteHandler}> delete </span>
+                {deleteButton && <button className="btn  ">
+                            <span className="material-icons h4 " onClick={playlistDeleteHandler}> delete </span>
                         </button>}
-                    </div>
                 </div>
-            </div>
+            {/* </div> */}
         </>
     )
 }
