@@ -40,13 +40,13 @@ const PlaylistModal = ({ video }) => {
     <>
        <div className="form input-form card-container playlist-container">
         <div className="flex space-around">
-          <div className="heading  h3 ">
+          <div className="heading  h3 m1">
             <p>Select Playlist</p>
           </div>
 
-          <button className="btn  m1" onClick={() => setShowModal(false)}>
+          <span className="m1 h6" onClick={() => setShowModal(false)}>
             <span className="material-icons">close</span>
-          </button>
+          </span>
         </div>
         
         <ul className="list-spaced list-checkbox fn-size-m">
@@ -56,7 +56,7 @@ const PlaylistModal = ({ video }) => {
               <label className="list-label h4  m1">
                 
                 <input
-                  className="h3 p1"
+                  className="h5 m1"
                     type="checkbox"
                     checked={
                       isVideoAlreadyInPlaylist(playlists, _id, video._id) ??
@@ -76,7 +76,7 @@ const PlaylistModal = ({ video }) => {
         {playlistInput && (
           <form className="flex space-around m1" onSubmit={(e) => playListTitleHandler(e)}>
             <input
-              className="h4 m1"
+              className="h5 m1 "
               type="text"
               placeholder="create playlist"
               onChange={(e) =>
@@ -86,7 +86,7 @@ const PlaylistModal = ({ video }) => {
                 })
               }
             />
-            <button className="btn m1" type="submit">
+            <button className="btn m1 h5" type="submit">
               CREATE
             </button>
           </form>
@@ -95,7 +95,7 @@ const PlaylistModal = ({ video }) => {
           className="btn h4 m1"
           onClick={(e) => createListHandler(e)}
         >
-          <span className="material-icons h4 ">add</span>
+        
           <span>Creat new playlist</span>
         </button>
       </div>

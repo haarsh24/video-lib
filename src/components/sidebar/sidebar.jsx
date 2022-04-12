@@ -40,9 +40,9 @@ const Sidebar = () => {
           </Link>
           <Link to="/signup">
             <div class="sidebar-item">
-              <span class="material-icons md-48">face</span>
+              <span class="material-icons md-48">explore</span>
               <label for="bookmark" class="sidebar-item-text h4">
-                Profile
+                explore
               </label>
             </div>
           </Link>

@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Festive&display=swap");
 :root {
-    --primary-color: #2d863c;
-  --secondary-color: #0D1117;
+    --primary-color: #09050c;
+  --secondary-color: #4a2961;
   --shadow-color: #bbb1c0;
   --text-color: #fafafa;
   --background-color: #ddd7e0;
-  --shadow: 5px 5px 9px #145a26, -5px -5px 9px #67ff80;
-  --shadow-dark:#145a26;
-  --shadow-light:#67ff80;
+  --shadow: 5px 5px 9px #230658, -5px -5px 9px #8367ff;
+  --shadow-dark:#230658;
+  --shadow-light:#8367ff;
 }
 * {
   color: var(--text-color);

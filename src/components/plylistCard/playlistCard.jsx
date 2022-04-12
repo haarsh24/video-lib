@@ -22,21 +22,21 @@ const playlistDeleteHandler = () => {
                     alt=""
                     className="image-responsive video-card-image"
                     loading="lazy"
-                />
+                        />
+                        <div className="flex space-between">
                 <span className="h4 p1">
                     <span className='material-icons'>playlist_play</span>
                     {videos.length}
-                </span>
+                        </span>
+                            <h4 className="h4 m1">{title}</h4>
+                            </div>
             </div>
         </Link>
-        <div className="text-container">
-            <div className="text-container-title h4">
-                <h4>{title}</h4>
-                <button className="btn h6 m-tb-1">
+                <button className="btn h6 ">
                     <span className="material-icons" onClick={playlistDeleteHandler}> delete </span>
                 </button>
-            </div>
-        </div>
+            
+        
     </div>
         </>
       )
