@@ -21,12 +21,12 @@ function App() {
   return (
     <div className="App">
       < Navbar />
-      <div className="flex-column">
-        <div className="flex">
+      <div className="flex-column ">
+        <div className="flex ">
          
          
           <Sidebar />
-         
+         <div className="main">
             <Routes>
            
         <Route path="/" element={<HomePage />} />
@@ -36,13 +36,13 @@ function App() {
         <Route path="/likedvideos" element={<LikedVideos />} />
         <Route path="/playlist" element={<Playlist />} />
         <Route path="/playlist/:playlistId" element={<PlaylistDetails  />}/>
-          <Route path="/category" element={<Category />} />
-          <Route path="/video/:videoId" element={<SingleVideoPage />} />
+        <Route path="/category" element={<Category />} />
+        <Route path="/video/:videoId" element={<SingleVideoPage />} />
             <Route path="/history" element={<HistoryPage />} />
                 <Route path="*" element={<Error />} />
               
               </Routes>
-             
+             </div>
           
           </div>
         <Footer />

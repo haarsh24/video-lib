@@ -9,7 +9,7 @@ const HistoryPage = () => {
     return (
       <>
         {historyList.length == 0 ? <Explore /> :
-          <div className="flex videos">
+          <div className="flex videos ">
             {historyList.map((video) => (
               <WatchLaterVideoCard video={video}
                 video={video}

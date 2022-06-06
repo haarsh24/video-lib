@@ -97,3 +97,9 @@
   justify-content: center;
   align-items: center;
 }
+
+.main{
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+}
