@@ -92,7 +92,8 @@ const SingleVideoPage = () => {
           <span class="material-icons action-item h3 " onClick={playlistHandler}>
             playlist_add
           </span>
-
+          <span>{videoData.description}</span>
+              
             </div>
         </div>
     );

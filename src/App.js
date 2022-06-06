@@ -26,8 +26,9 @@ function App() {
          
          
           <Sidebar />
-          <div className="main-container">
-      <Routes>  
+         
+            <Routes>
+           
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup/>}/>
@@ -38,9 +39,11 @@ function App() {
           <Route path="/category" element={<Category />} />
           <Route path="/video/:videoId" element={<SingleVideoPage />} />
             <Route path="/history" element={<HistoryPage />} />
-            <Route path="*" element={<Error/>}/>
-          </Routes>
-          </div>
+                <Route path="*" element={<Error />} />
+              
+              </Routes>
+             
+          
           </div>
         <Footer />
         <ResponsiveSidebar/>

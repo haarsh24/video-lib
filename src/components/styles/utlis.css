@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Festive&display=swap");
 :root {
-    --primary-color: #09050c;
-  --secondary-color: #4a2961;
+    --primary-color: #141820;
+  --secondary-color: #07080B;
   --shadow-color: #bbb1c0;
   --text-color: #fafafa;
   --background-color: #ddd7e0;
-  --shadow: 5px 5px 9px #230658, -5px -5px 9px #8367ff;
-  --shadow-dark:#230658;
-  --shadow-light:#8367ff;
+  --shadow: 5px 5px 9px #0d121b, -5px -5px 9px #15171d;
+  --shadow-dark:#0d121b;
+  --shadow-light:#15171d;
 }
 * {
   color: var(--text-color);
@@ -128,11 +128,9 @@ input {
 .card-container {
   border-radius: 15px;
   background: var(--primary-color);
-  box-shadow: 5px 5px 1px var(--shadow-dark), -5px -5px 1px var(--shadow-light);
+  /* box-shadow: 5px 5px 1px var(--shadow-dark), -5px -5px 1px var(--shadow-light); */
 }
-img {
-  border-radius: 15px;
-}
+
 .center {
   align-items: center;
 }
