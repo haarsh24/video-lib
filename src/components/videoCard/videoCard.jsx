@@ -77,7 +77,7 @@ const VideoCard = ({video, setCurrentClickedVideo,setShowModal}) => {
             </div>
           </div>
         </div>
-        <div className="flex space-between">
+        <div className="flex space-between actions">
           <span
             className="material-icons action-item watch-later-icon h3"
             onClick={watchLaterHandler}

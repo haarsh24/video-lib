@@ -15,19 +15,21 @@ import { Playlist } from "./pages/playlist/playlist";
 import { PlaylistDetails } from "./pages/playlistDetails/playlistDetails";
 import { Signup } from "./pages/signup/signup";
 import { SingleVideoPage } from "./pages/singleVideoPage/singleVideoPage";
+
 import { WatchLater } from "./pages/watchLater/watchLater";
 
 function App() {
   return (
     <div className="App">
       < Navbar />
-      <div className="flex-column">
-        <div className="flex">
+      <div className="flex-column ">
+        <div className="flex ">
          
          
           <Sidebar />
-          <div className="main-container">
-      <Routes>  
+         <div className="main">
+            <Routes>
+        
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup/>}/>
@@ -35,12 +37,14 @@ function App() {
         <Route path="/likedvideos" element={<LikedVideos />} />
         <Route path="/playlist" element={<Playlist />} />
         <Route path="/playlist/:playlistId" element={<PlaylistDetails  />}/>
-          <Route path="/category" element={<Category />} />
-          <Route path="/video/:videoId" element={<SingleVideoPage />} />
+        <Route path="/category" element={<Category />} />
+        <Route path="/video/:videoId" element={<SingleVideoPage />} />
             <Route path="/history" element={<HistoryPage />} />
-            <Route path="*" element={<Error/>}/>
-          </Routes>
-          </div>
+                <Route path="*" element={<Error />} />
+              
+              </Routes>
+             </div>
+          
           </div>
         <Footer />
         <ResponsiveSidebar/>

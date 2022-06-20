@@ -25,9 +25,7 @@ const Navbar = () => {
             <span className="h3">{(isLogin)?`Hi ,${userData.lastName}`:"Login"}</span>
           </Link>
         </div>
-        <div className="nav-icon ">
-          <span className="material-icons md-48">face</span>
-        </div>
+        
       </div>
     </>
   );

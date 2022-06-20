@@ -7,18 +7,15 @@
 }
 .action-item {
   text-align: center;
-  margin: 0rem !important;
-  padding: 0rem 1rem 0.1rem 1rem !important;
+  
 }
 .action-item:hover {
   /* color: var(--primary-color); */
   font-size: 1.5rem;
-  background-color: var(--secondary-color);
-  border-radius: 1rem 0 0.5rem 0;
+  background-color: var(--primary-color);
+  
 }
-.action-item:hover.watch-later-icon:hover {
-  border-radius: 0 1rem 0 0.5rem;
-}
+
 .playlist-container{
   position: absolute;
   z-index: 25;
@@ -48,7 +45,7 @@
 }
 
 .video-player{
-  width:50rem;
+  width:60rem;
   height:35rem;
  
 }
@@ -95,3 +92,15 @@
   color:var(--primary-color);
   border-radius: 0 0 1rem 1rem;
 }
+.main-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main{
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
