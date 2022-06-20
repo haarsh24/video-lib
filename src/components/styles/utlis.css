@@ -159,7 +159,7 @@ input {
 
 .brand-name {
   font-size: 3rem;
-  color: var(--primary-color);
+  color: var(--text-color);
   font-family: "Festive", cursive;
 }
 .input-search {

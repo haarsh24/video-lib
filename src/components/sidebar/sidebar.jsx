@@ -1,10 +1,13 @@
 import "../styles/main.css";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { useState } from "react";
 
 const Sidebar = () => {
+  
+
   return (
     <>
-      <div className="sidebar">
+      <div className="sidebar ">
         <div class="sidebar-items">
           <Link to="/likedvideos">
             <div class="sidebar-item">
@@ -38,7 +41,7 @@ const Sidebar = () => {
               </label>
             </div>
           </Link>
-          <Link to="/signup">
+          <Link to="/">
             <div class="sidebar-item">
               <span class="material-icons md-48">explore</span>
               <label for="bookmark" class="sidebar-item-text h4">

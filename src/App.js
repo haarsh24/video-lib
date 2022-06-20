@@ -15,6 +15,7 @@ import { Playlist } from "./pages/playlist/playlist";
 import { PlaylistDetails } from "./pages/playlistDetails/playlistDetails";
 import { Signup } from "./pages/signup/signup";
 import { SingleVideoPage } from "./pages/singleVideoPage/singleVideoPage";
+
 import { WatchLater } from "./pages/watchLater/watchLater";
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
           <Sidebar />
          <div className="main">
             <Routes>
-           
+        
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup/>}/>
