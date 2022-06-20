@@ -17,7 +17,7 @@ const PlaylistDetails = () => {
     <div className='filter-products'>
                 <div className="">
                     
-                        <div className='grid-30-70'>
+                        <div className=''>
                         <PlaylistInfoCard image_id={image_id} title={data.title} deleteButton={deletePlaylist} />
                             <div>
                                 <VerticalVideoCard

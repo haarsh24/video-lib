@@ -27,7 +27,10 @@ const Signup = () => {
         "userData",
         JSON.stringify(response.data.createdUser)
       );
-      authDispatch({ type: "ADD_TOKEN", payload: response.data.encodedToken });
+      
+      authDispatch({ type: "USER_LOGIN" });
+      authDispatch({ type: "USER_TOKEN", payload: response.data.encodedToken });
+      authDispatch({ type: "USER_DATA", payload: response.data.createdUser });
     } catch (err) {
       console.log(err);
     } finally {

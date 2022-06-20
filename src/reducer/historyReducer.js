@@ -7,6 +7,10 @@ const historyReducer = (state, action) => {
             ...state,
             historyList: action.payload
         }
+        case "CLEAR_HISTORY":
+            return {
+                historyList:[]
+            }
         default:
         return state;
     }

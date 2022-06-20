@@ -38,7 +38,7 @@ const Login = () => {
 
   return (
     <>
-      <div id="login-container" className=" auth login-container ">
+      <div id="login-container" className=" auth login-container main">
         <form
           className="form input-form card-container"
           onSubmit={(e) => submitHandler(e, email, password)}

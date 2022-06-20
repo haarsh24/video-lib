@@ -4,6 +4,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   width: 15rem;
+ 
 }
 
 .sidebar-item {
@@ -17,6 +18,7 @@
   width: 15rem;
   border-radius: 1rem;
   padding-left: 0.5rem;
+ 
 }
 
 .sidebar-item:hover {

@@ -33,7 +33,7 @@ const WatchLaterVideoCard = (props) => {
     return (
       <>
         
-          :<div className="card basic video-card">
+          <div className="card basic video-card">
           <div className="img-container">
             <img
               className="image-responsive video-card-image"

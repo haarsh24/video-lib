@@ -3,17 +3,19 @@ import  errorImage  from "../../assets/error.gif"
 
 const Error = () => {
     return (
-        <div className="error flex-column">
+        <div className="error flex-column explore-error p2">
         
-            <div class="image-responsive ">
+           
             <h1>Error</h1>
-        <div className="h3 p2">
+           <div className="h3 ">
             Sorry, something went wrong. Please try again later.
+                </div>
+                <Link to="/">
+                <button className="btn m-tb-1">Go Back</button></Link>  
+                <div class=" ">
+                <img src={errorImage} className="image-responsive gif"/>
             </div>
-                <img src={errorImage} className="gif"/>
-            </div>
-            <Link to="/">
-        <button className="btn m1">Go Back</button></Link>  
+           
         </div>
     );
 }
